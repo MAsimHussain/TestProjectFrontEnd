@@ -27,7 +27,7 @@ Before starting the project, make sure to install the necessary dependencies:
 npm install
 ```
 
-## Project Statup
+## Project Startup
 
 ```bash
 npm run dev
