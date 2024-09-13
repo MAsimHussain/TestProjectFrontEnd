@@ -5,9 +5,10 @@ export default function EmployeeList() {
   const navigate = useNavigate();
 
   const Static_Images = import.meta.env.VITE_STATIC_ASSETS;
-  
+
   const [Employees, setEmployees] = useState([]);
 
+  console.log(Employees);
   const EmployeesData = async () => {
     try {
       const Employees = await apiService.GetEmployees();
@@ -24,6 +25,7 @@ export default function EmployeeList() {
 
   const DeleteEmployee = async (id) => {
     try {
+      debugger;
       await apiService.DeleteEmployeeByID(id);
       console.log("Employee Deleted Successfully!");
       window.location.reload();
@@ -125,16 +127,16 @@ export default function EmployeeList() {
                               <img
                                 src={`${Static_Images}/${profileImage}`} // Adjust based on your API's image path
                                 className="w-[50px] h-[50px] rounded-2xl mx-auto"
-                                alt={lastName}
+                                alt="ProfilePicture"
                               />
                             </td>
                             <td className="p-3 pl-0 text-center">
-                                <button
-                                  onClick={() => GetEmployeeId(id)}
-                                  className="inline-block text-[.925rem] font-medium leading-normal text-center align-middle cursor-pointer rounded-2xl transition-colors duration-150 ease-in-out text-light-inverse bg-light-dark border-light shadow-none border-0 py-2 px-5 hover:bg-secondary active:bg-red focus:bg-red"
-                                >
-                                  Edit
-                                </button>
+                              <button
+                                onClick={() => GetEmployeeId(id)}
+                                className="inline-block text-[.925rem] font-medium leading-normal text-center align-middle cursor-pointer rounded-2xl transition-colors duration-150 ease-in-out text-light-inverse bg-light-dark border-light shadow-none border-0 py-2 px-5 hover:bg-secondary active:bg-red focus:bg-red"
+                              >
+                                Edit
+                              </button>
                               <button
                                 onClick={() => DeleteEmployee(id)}
                                 className="inline-block ml-2 text-[.925rem] font-medium leading-normal text-center align-middle cursor-pointer rounded-2xl transition-colors duration-150 ease-in-out text-light-inverse bg-light-dark border-light shadow-none border-0 py-2 px-5 hover:bg-secondary active:bg-blue focus:bg-blue"
