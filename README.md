@@ -1,4 +1,4 @@
-# Task Project React JS
+# Task Project: React JS
 
 ## Overview
 
@@ -6,7 +6,7 @@ A simple React application demonstrating basic CRUD (Create, Read, Update, Delet
 
 ## Features
 
-### Employee 
+### Employee
 - Add employee
 - Delete employee
 - Get Employees
@@ -19,9 +19,20 @@ A simple React application demonstrating basic CRUD (Create, Read, Update, Delet
 - HTML, CSS, JavaScript
 - Tailwind CSS
 
-## Install dependencies:
+## Install Dependencies
 
+Before starting the project, make sure to install the necessary dependencies:
+
+```bash
 npm install
+```
+
+## Project Statup
+
+```bash
+npm run dev
+```
+
 
 ## Installation Project
 1. **Clone the repository:**
