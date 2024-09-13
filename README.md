@@ -6,8 +6,8 @@ A simple React application demonstrating basic CRUD (Create, Read, Update, Delet
 
 ## Features
 
-### AddEmployee
-- add employee
+### Employee 
+- Add employee
 - Delete employee
 - Get Employees
 - Get Employee By ID
